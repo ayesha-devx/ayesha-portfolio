@@ -1,0 +1,23 @@
+@import "./_globalColor";
+
+.dark-mode {
+  background-color: $darkBackground;
+  background: radial-gradient(circle at 50% 10%, #1e1b4b 0%, #0b0e14 100%);
+  color: #f8f9fa;
+  transition: all 0.3s ease;
+
+  /* Remove background from text elements that incorrectly use the dark-mode class */
+  &.greeting-text, 
+  &.greeting-text-p, 
+  &.skills-heading,
+  &.subTitle,
+  &.about-heading,
+  &.about-text,
+  &.contact-title,
+  &.contact-subtitle,
+  &.experience-text-role,
+  &.experience-text-date,
+  &.experience-text-desc {
+    background: transparent !important;
+  }
+}
