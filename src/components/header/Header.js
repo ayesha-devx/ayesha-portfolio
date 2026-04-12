@@ -21,6 +21,13 @@ function Header() {
   const viewProjects = bigProjects.display;
   const viewResume = resumeSection.display;
 
+  const closeMenu = () => {
+    const menuBtn = document.getElementById("menu-btn");
+    if (menuBtn) {
+      menuBtn.checked = false;
+    }
+  };
+
   return (
     <Headroom>
       <header className={isDark ? "dark-menu header" : "header"}>
@@ -35,37 +42,37 @@ function Header() {
         </label>
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           <li>
-            <a href="#greeting">Home</a>
+            <a href="#greeting" onClick={closeMenu}>Home</a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="#about" onClick={closeMenu}>About</a>
           </li>
           {viewSkills && (
             <li>
-              <a href="#skills">Skills</a>
+              <a href="#skills" onClick={closeMenu}>Skills</a>
             </li>
           )}
           {viewProjects && (
             <li>
-              <a href="#projects">Projects</a>
+              <a href="#projects" onClick={closeMenu}>Projects</a>
             </li>
           )}
           {viewExperience && (
             <li>
-              <a href="#experience">Experience</a>
+              <a href="#experience" onClick={closeMenu}>Experience</a>
             </li>
           )}
           {viewEducation && (
             <li>
-              <a href="#education">Education</a>
+              <a href="#education" onClick={closeMenu}>Education</a>
             </li>
           )}
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact" onClick={closeMenu}>Contact</a>
           </li>
           {viewResume && (
             <li>
-              <a href="#resume">Resume</a>
+              <a href="#resume" onClick={closeMenu}>Resume</a>
             </li>
           )}
           <li className="nav-toggle">

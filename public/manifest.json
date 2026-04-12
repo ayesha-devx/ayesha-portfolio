@@ -3,11 +3,12 @@
   "name": "DeveloperFolio",
   "icons": [
     {
-      "src": "/favicon.png?v=3",
+      "src": "/favicon.png.png?v=4",
       "type": "image/png",
       "sizes": "192x192 512x512"
     }
   ],
+
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#6c63ff",

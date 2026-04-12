@@ -33,3 +33,18 @@
 .software-skill-inline > i:hover ~ p {
   color: $skillsColor;
 }
+
+@media (max-width: 768px) {
+  .dev-icons {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 2.2rem;
+    gap: 20px;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+    .dev-icons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

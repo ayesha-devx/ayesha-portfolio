@@ -153,16 +153,40 @@
 }
 
 @media (max-width: 768px) {
+  .experience-banner, .experience-blurred_div {
+      height: 7rem;
+  }
+  
+  .experience-div-company {
+      height: 5rem;
+  }
+
+  .experience-roundedimg {
+    width: 5rem;
+    height: 5rem;
+    top: 4.5rem;
+  }
+  
   .experience-text-role {
-    font-size: 22px;
+    font-size: 20px;
+    padding-top: 3rem;
   }
+  
   .experience-text-company {
-    font-size: 22px;
-  }
-  .experience-text-date {
     font-size: 18px;
+    padding: 1rem;
   }
-  .experience-text-desc {
+  
+  .experience-text-date {
     font-size: 16px;
+  }
+  
+  .experience-text-details {
+      margin-top: 1rem;
+      padding: 1rem;
+  }
+  
+  .experience-text-details ul {
+      font-size: 14px;
   }
 }

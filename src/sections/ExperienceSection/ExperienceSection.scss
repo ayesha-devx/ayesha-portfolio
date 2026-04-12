@@ -1,3 +1,5 @@
+@import "../../_globalColor";
+
 .experience-cards-div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -30,9 +32,20 @@
 }
 
 @media (max-width: 768px) {
+  .experience-container {
+      width: 100% !important;
+      padding: 20px !important;
+      margin-top: 1rem;
+  }
+  
+  .experience-cards-div {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+  }
+
   .experience-heading {
-    font-size: 30px;
+    font-size: 32px;
     text-align: center;
+    margin-bottom: 2rem;
   }
 }
-

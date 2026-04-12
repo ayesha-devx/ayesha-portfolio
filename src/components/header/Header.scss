@@ -25,6 +25,10 @@
   max-width: 100%;
   padding: 15px 20px;
   margin: 0px auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header ul {
@@ -52,12 +56,12 @@
 
 .header .logo {
   display: block;
-  flex: none;
-  float: left;
+  flex: 1;
   font-size: 1.8em;
   text-decoration: none;
   margin-top: 5px;
   line-height: normal;
+  white-space: nowrap;
 }
 
 .header .logo-name {
@@ -68,113 +72,111 @@
   padding: 0 10px;
 }
 
-/* menu */
-
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
-
-/* menu icon */
-
-.header .menu-icon {
-  cursor: pointer;
-  display: inline-block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
-}
-
-.header .menu-icon .navicon {
-  background: $iconBackground;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background 0.2s ease-out;
-  width: 18px;
-}
-
-.header .menu-icon .navicon-dark {
-  background: $textColorDark;
-}
-
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-  background: $iconBackground;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%;
-}
-
-.header .menu-icon .navicon-dark:before,
-.header .menu-icon .navicon-dark:after {
-  background: $textColorDark !important;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%;
-}
-
-.header .menu-icon .navicon:before {
-  top: 5px;
-}
-
-.header .menu-icon .navicon:after {
-  top: -5px;
-}
-
-/* menu btn */
-
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
-  max-height: 486px;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent !important;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-
-/* 48em = 768px */
-
-@media (min-width: 48em) {
-  .header li {
-    float: none;
+/* MOBILE MENU (UP TO TABLET) */
+@media (max-width: 1024px) {
+  .header .logo {
+    font-size: 1.2rem;
+    margin-top: 0;
   }
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  
+  .header .logo-name {
+    padding: 0 5px;
   }
+  
+  .header .menu-icon {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px 0;
+    margin-left: 10px;
+    z-index: 1001;
+  }
+
+  .header .menu-icon .navicon {
+    background: #000;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background 0.2s ease-out;
+    width: 24px;
+  }
+
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #000;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+
+
+  .dark-menu .menu-icon .navicon,
+  .dark-menu .menu-icon .navicon:before,
+  .dark-menu .menu-icon .navicon:after {
+    background: $textColorDark !important;
+  }
+
+
+  .header .menu-icon .navicon:before { top: 7px; }
+  .header .menu-icon .navicon:after { top: -7px; }
+
+  /* Overlay Menu */
   .header .menu {
-    max-height: none;
+    display: block !important;
+    clear: both;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: inherit;
+    z-index: 1000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .header .menu li {
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .dark-menu .menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .header .menu-btn:checked ~ .menu {
+    max-height: 100vh;
+    padding-bottom: 2rem;
+  }
+
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent !important;
+  }
+
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+}
+
+/* DESKTOP MENU (LAPTOP AND ABOVE) */
+@media (min-width: 1025px) {
+  .header .menu {
     display: flex;
     align-items: center;
+    max-height: none;
   }
   .header .menu-icon {
-    display: none;
+      display: none;
   }
   .nav-toggle {
     display: flex;
@@ -183,9 +185,17 @@
     margin-right: 15px;
   }
 }
-@media (max-width: 960px) and (min-width: 768px) {
-  .header {
-    font-size: 12px;
-  }
+
+/* menu btn (always hidden checkbox) */
+.header .menu-btn {
+  display: none;
 }
 
+@media (max-width: 1024px) and (min-width: 768px) {
+  .header {
+    font-size: 14px;
+  }
+  .header .logo {
+      font-size: 1.4rem;
+  }
+}
