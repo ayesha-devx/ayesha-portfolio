@@ -11,5 +11,12 @@
 
 .footer-div {
   margin-top: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
+
+@media (max-width: 768px) {
+  .footer-div {
+    margin-top: 5rem;
+  }
+}
+

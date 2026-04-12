@@ -32,28 +32,27 @@ export default function ContactSection() {
                 isDark ? "dark-mode contact-text-div" : "contact-text-div"
               }
             >
-              {contactInfo.number && (
-                <>
+              <div className="contact-details-inner">
+                {contactInfo.number && (
                   <a
                     className="contact-detail"
                     href={"tel:" + contactInfo.number}
                   >
                     {contactInfo.number}
                   </a>
-                  <br />
-                  <br />
-                </>
-              )}
-              <a
-                className="contact-detail-email"
-                href={"mailto:" + contactInfo.email_address}
-              >
-                {contactInfo.email_address}
-              </a>
-              <br />
-              <br />
-              <SocialMedia />
+                )}
+                <a
+                  className="contact-detail-email"
+                  href={"mailto:" + contactInfo.email_address}
+                >
+                  {contactInfo.email_address}
+                </a>
+              </div>
+              <div className="contact-social-div">
+                <SocialMedia />
+              </div>
             </div>
+
           </div>
           <div className="contact-image-div">
             {illustration.animated ? (
