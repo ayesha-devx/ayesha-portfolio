@@ -16,7 +16,7 @@ export default function ContactSection() {
           <div className="contact-header">
             <h1 className="heading contact-title">
               {contactInfo.title}{" "}
-              <i className="fas fa-phone-alt contact-title-icon"></i>
+              <i className="fas fa-envelope contact-title-icon"></i>
             </h1>
             <p
               className={
