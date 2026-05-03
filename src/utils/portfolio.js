@@ -214,6 +214,22 @@ const bigProjects = {
       ]
     },
     {
+      image: require("../assets/images/Screenshot 2026-05-03 223517.png"),
+      projectName: "Lazy Genius AI – Empowering Technical Thought Leaders with AI",
+      projectDesc: "A premium, AI-augmented MERN platform for technical blogging. Features AI-powered drafting, voice-enabled reading, PDF export, and automated smart cover generation.",
+      techStack: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
+      footerLink: [
+        {
+          name: "Live Demo",
+          url: "https://ai-for-lazy-genius.vercel.app"
+        },
+        {
+          name: "GitHub",
+          url: "https://github.com/ayesha-devx/ai-for-lazy-genius"
+        }
+      ]
+    },
+    {
       image: require("../assets/images/eduNexus.png"),
       projectName: "EduNexus – Smart Student Management System",
       projectDesc: "Role-based system with authentication and access control. Includes modules for attendance tracking, course management, and feedback system.",
@@ -226,22 +242,6 @@ const bigProjects = {
         {
           name: "GitHub",
           url: "https://github.com/ayesha-devx/EduNexus_smart-student-management-system"
-        }
-      ]
-    },
-    {
-      image: require("../assets/images/shopStyle.png"),
-      projectName: "ShopStyle – Modern E-Commerce Website",
-      projectDesc: "Responsive frontend for an e-commerce platform with product catalog, category navigation, cart, and wishlist functionality. Optimized for performance using Vite.",
-      techStack: ["React", "Tailwind", "TypeScript"],
-      footerLink: [
-        {
-          name: "Live Demo",
-          url: "https://shop-style-ochre.vercel.app"
-        },
-        {
-          name: "GitHub",
-          url: "https://github.com/ayesha-devx/ShopStyle"
         }
       ]
     }
