@@ -214,7 +214,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("../assets/images/Screenshot 2026-05-03 223517.png"),
+      image: require("../assets/images/lazy-genius-hero.png"),
       projectName: "Lazy Genius AI – Empowering Technical Thought Leaders with AI",
       projectDesc: "A premium, AI-augmented MERN platform for technical blogging. Features AI-powered drafting, voice-enabled reading, PDF export, and automated smart cover generation.",
       techStack: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
