@@ -292,7 +292,7 @@ const resumeSection = {
 const contactInfo = {
   title: "Contact Me",
   subtitle: "Open to internships and opportunities. Let's build something impactful together.",
-  number: "+91-8108729039",
+  number: "",
   email_address: "ayesha111206@gmail.com"
 };
 
